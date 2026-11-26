@@ -1,0 +1,38 @@
+{
+    "Inputs": {
+        "input_1_0_0": {
+            "name": "input_1_0",
+            "shape": [
+                1,
+                192,
+                192,
+                3
+            ],
+            "format": "nchw",
+            "dtype": "uint8"
+        }
+    },
+    "Outputs": {
+        "Identity_140": {
+            "name": "Identity",
+            "shape": [
+                1,
+                2016,
+                18
+            ],
+            "format": "nhwc",
+            "dtype": "float32"
+        },
+        "Identity_1_141": {
+            "name": "Identity_1",
+            "shape": [
+                1,
+                2016,
+                1
+            ],
+            "format": "nhwc",
+            "dtype": "float32"
+        }
+    },
+    "Recurrent_connections": {}
+}

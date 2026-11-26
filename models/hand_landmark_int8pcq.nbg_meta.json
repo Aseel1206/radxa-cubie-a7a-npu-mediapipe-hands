@@ -1,0 +1,54 @@
+{
+    "Inputs": {
+        "input_1_0_0": {
+            "name": "input_1_0",
+            "shape": [
+                1,
+                224,
+                224,
+                3
+            ],
+            "format": "nchw",
+            "dtype": "uint8"
+        }
+    },
+    "Outputs": {
+        "Identity_96": {
+            "name": "Identity",
+            "shape": [
+                1,
+                63
+            ],
+            "format": "nhwc",
+            "dtype": "float32"
+        },
+        "Identity_1_97": {
+            "name": "Identity_1",
+            "shape": [
+                1,
+                1
+            ],
+            "format": "nhwc",
+            "dtype": "float32"
+        },
+        "Identity_2_98": {
+            "name": "Identity_2",
+            "shape": [
+                1,
+                1
+            ],
+            "format": "nhwc",
+            "dtype": "float32"
+        },
+        "Identity_3_99": {
+            "name": "Identity_3",
+            "shape": [
+                1,
+                63
+            ],
+            "format": "nhwc",
+            "dtype": "float32"
+        }
+    },
+    "Recurrent_connections": {}
+}

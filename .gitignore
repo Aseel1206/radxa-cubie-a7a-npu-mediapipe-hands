@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+work_*/
+images/
+board_out/
+*.onnx
+*.tflite
+*.task
+*.safetensors
+*.npy
+*.h5
+*.bin
+!models/**
