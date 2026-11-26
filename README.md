@@ -97,6 +97,16 @@ These are not specific to this model, so if you convert something else you will 
 
 Models and the processing recipe are from [MediaPipe](https://github.com/google-ai-edge/mediapipe) (Apache-2.0). The sample photos in the picture are from MediaPipe's test assets.
 
+## More models on the Cubie A7A NPU
+
+Same board, same toolchain, same kind of notes:
+
+- [radxa-cubie-a7a-npu-blazeface](https://github.com/Aseel1206/radxa-cubie-a7a-npu-blazeface): MediaPipe BlazeFace face detector (~1 ms)
+- [radxa-cubie-a7a-npu-deit-tiny](https://github.com/Aseel1206/radxa-cubie-a7a-npu-deit-tiny): DeiT-tiny vision transformer (14.5 ms int8)
+- [radxa-cubie-a7a-npu-depth-anything-v2](https://github.com/Aseel1206/radxa-cubie-a7a-npu-depth-anything-v2): Depth Anything V2 small depth estimation (255 ms int8)
+- [radxa-cubie-a7a-npu-llm-smollm2-135m](https://github.com/Aseel1206/radxa-cubie-a7a-npu-llm-smollm2-135m): SmolLM2-135M chat (~23 tokens/s)
+- [fast-acvnet-radxa-npu](https://github.com/Aseel1206/fast-acvnet-radxa-npu): stereo depth
+
 ## Licence
 
 The scripts and docs here are MIT (see `LICENSE`). The neural networks are not mine and keep their own licences; check the model card of the original before reusing a converted `.nb`.
