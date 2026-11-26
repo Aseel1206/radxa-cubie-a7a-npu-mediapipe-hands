@@ -97,10 +97,23 @@ These are not specific to this model, so if you convert something else you will 
 
 Models and the processing recipe are from [MediaPipe](https://github.com/google-ai-edge/mediapipe) (Apache-2.0). The sample photos in the picture are from MediaPipe's test assets.
 
+## Use it from Python
+
+There is now a pip-installable Python wrapper for the NPU, [cubie-npu](https://github.com/Aseel1206/cubie-npu) (not on PyPI yet, install it with `pip install git+https://github.com/Aseel1206/cubie-npu`). With it you can skip the C++ tools above:
+
+```python
+from cubie_npu import Model
+palm, lm = Model("models/palm_detector_int8pcq.nb"), Model("models/hand_landmark_int8pcq.nb")
+reg, scores = palm(letterboxed_rgb_192x192_uint8)        # then decode + NMS, crop, and lm(crop_224x224_uint8)
+```
+
+[`examples/hands.py` in cubie-npu](https://github.com/Aseel1206/cubie-npu/blob/main/examples/hands.py) has the whole pipeline, about 10 ms per frame for one hand on a still image (no camera or drawing). That script is the Python version of `scripts/hands_demo.py` here, which shells out to `nb_bench` and is much slower.
+
 ## More models on the Cubie A7A NPU
 
 Same board, same toolchain, same kind of notes:
 
+- [cubie-npu](https://github.com/Aseel1206/cubie-npu): Python bindings for the NPU
 - [radxa-cubie-a7a-npu-blazeface](https://github.com/Aseel1206/radxa-cubie-a7a-npu-blazeface): MediaPipe BlazeFace face detector (~1 ms)
 - [radxa-cubie-a7a-npu-deit-tiny](https://github.com/Aseel1206/radxa-cubie-a7a-npu-deit-tiny): DeiT-tiny vision transformer (14.5 ms int8)
 - [radxa-cubie-a7a-npu-depth-anything-v2](https://github.com/Aseel1206/radxa-cubie-a7a-npu-depth-anything-v2): Depth Anything V2 small depth estimation (255 ms int8)
